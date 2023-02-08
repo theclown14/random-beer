@@ -1,0 +1,88 @@
+{
+    "beers": [
+      {
+        "id": 2468,
+        "uid": "a63122cd-9b52-4aaf-91d3-7c93e419b14b",
+        "brand": "Hoegaarden",
+        "name": "Trappistes Rochefort 8",
+        "style": "German Wheat And Rye Beer",
+        "hop": "Magnum",
+        "yeast": "3944 - Belgian Witbier",
+        "malts": "Carapils",
+        "ibu": "21 IBU",
+        "alcohol": "2.8%",
+        "blg": "9.1°Blg",
+        "rating": "1"
+      },
+      {
+        "id": 3419,
+        "uid": "54727749-e60d-4978-899b-1b6a833a6ed9",
+        "brand": "Stella Artois",
+        "name": "Pliny The Elder",
+        "style": "Sour Ale",
+        "hop": "Horizon",
+        "yeast": "1332 - Northwest Ale",
+        "malts": "Victory",
+        "ibu": "55 IBU",
+        "alcohol": "6.4%",
+        "blg": "7.2°Blg",
+        "rating": "1"
+      },
+      {
+        "id": 3038,
+        "uid": "635cc708-af0f-474c-a9a5-e88d6c130be2",
+        "brand": "Guinness",
+        "name": "90 Minute IPA",
+        "style": "Smoke-flavored",
+        "hop": "Columbia",
+        "yeast": "1332 - Northwest Ale",
+        "malts": "Carapils",
+        "ibu": "44 IBU",
+        "alcohol": "6.4%",
+        "blg": "11.3°Blg",
+        "rating": "2"
+      },
+      {
+        "id": 8333,
+        "uid": "187fa27a-0cb8-48d6-a3ad-969c7c144438",
+        "brand": "Budweiser",
+        "name": "Westmalle Trappist Tripel",
+        "style": "Belgian Strong Ale",
+        "hop": "Chinook",
+        "yeast": "2278 - Czech Pils",
+        "malts": "Caramel",
+        "ibu": "53 IBU",
+        "alcohol": "9.7%",
+        "blg": "12.1°Blg",
+        "rating": "3"
+      },
+      {
+        "id": 6189,
+        "uid": "c2d3f0c7-9aa9-4ff2-8164-0cb6cfe5e94e",
+        "brand": "Heineken",
+        "name": "Founders Breakfast Stout",
+        "style": "Dark Lager",
+        "hop": "Bitter Gold",
+        "yeast": "2206 - Bavarian Lager",
+        "malts": "Chocolate",
+        "ibu": "53 IBU",
+        "alcohol": "3.9%",
+        "blg": "14.2°Blg",
+        "rating": "3"
+      },
+      {
+        "id": 8798,
+        "uid": "206b0919-ef36-4c78-a2a2-fe36d8ae599e",
+        "brand": "Corona Extra",
+        "name": "Arrogant Bastard Ale",
+        "style": "European Amber Lager",
+        "hop": "Glacier",
+        "yeast": "2278 - Czech Pils",
+        "malts": "Victory",
+        "ibu": "40 IBU",
+        "alcohol": "5.3%",
+        "blg": "10.5°Blg",
+        "rating": "5"
+      }
+    ]
+  }

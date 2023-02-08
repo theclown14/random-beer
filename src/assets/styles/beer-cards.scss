@@ -1,0 +1,7 @@
+.beer-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-items: center;
+  gap: 56px;
+}

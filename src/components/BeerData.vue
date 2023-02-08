@@ -1,39 +1,29 @@
 <template>
-  <div class="">
-    <h1>Пиво brand</h1>
-    <h2>{{ beer.brand }}</h2>
-    <h1>Пиво name</h1>
-    <h2>{{ beer.name }}</h2>
-    <h1>Пиво style</h1>
-    <h2>{{ beer.style }}</h2>
-    <h1>Пиво alcohol</h1>
-    <h2>{{ beer.alcohol }}</h2>
-    <span v-if="beer.alcohol > '7.0%'">hight</span>
-    <span v-else>low</span>
+  <div class="main">
+    <div class="wrapper container">
+      <div class="beer__wrapper">
+        <BeerCards :beers="beers" />
+        <BeerFilter />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import BeerCards from "@/components/BeerCards.vue";
+import BeerFilter from "@/components/BeerFilter.vue";
+import data from "@/beers.json"
 export default {
+  components: { BeerCards, BeerFilter },
   data: function () {
     return {
-      beer: ""
+      beers: data.beers,
     }
-  },
-  mounted() {
-    const BeerData = async () => {
-      let url = 'https://random-data-api.com/api/beer/random_beer';
-      let response = await fetch(url);
-      this.beer = await response.json();
-    }
-    BeerData();
   }
 }
 </script>
 
 
-<style scoped>
-h1 {
-  color: salmon;
-}
+<style lang="scss" scoped>
+
 </style>

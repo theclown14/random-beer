@@ -1,0 +1,80 @@
+/*------------------------------------*\
+  # Transitions
+\*------------------------------------*/
+@mixin transition($properties...) {
+  @if length($properties) >= 1 {
+    transition: $properties;
+  } @else {
+    transition: all 0.2s ease-in-out 0s;
+  }
+}
+
+@mixin containBg() {
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin scrollhide() {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin shadow() {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadowHover() {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+@mixin scrollbar($bg: false, $color: false) {
+  @if $bg and $color {
+    scrollbar-width: thin;
+    scrollbar-color: $color $bg;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      background-color: $bg;
+
+      &-thumb {
+        background-color: $color;
+      }
+    }
+  } @else {
+    scrollbar-width: thin;
+    scrollbar-color: #4f4f52 rgba(234, 234, 235, 0.2);
+
+    &::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+      background-color: rgba(234, 234, 235, 0.2);
+
+      &-thumb {
+        background-color: #4f4f52;
+      }
+    }
+  }
+}
+
+// увеличение области нажатия
+@mixin expand-interactive-area($width, $height: $width) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: $width;
+    height: $height;
+    transform: translate(-50%, -50%);
+  }
+}

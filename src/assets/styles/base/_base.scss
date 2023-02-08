@@ -1,0 +1,114 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px; /* ширина scrollbar'a */
+  background: transparent; /* опционально */
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-size: $font-size--root;
+  @include scrollbar($color-theme-border-light, $color-theme-border);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-bg-primary;
+  font-family: $font-family;
+  font-style: $font-style;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color-typography-primary;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+select,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  & > .content {
+    flex: 1 0 auto;
+    position: relative;
+    background-color: $color-bg-primary;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: map_get($wrapper, content-size--min);
+  max-width: map_get($wrapper, content-size);
+  padding-left: map_get($wrapper, padding-size);
+  padding-right: map_get($wrapper, padding-size);
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+@mixin truncateText($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+.overflow {
+  overflow: hidden;
+}
